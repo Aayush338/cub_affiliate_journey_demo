@@ -1,0 +1,153 @@
+.section {
+  padding: 24px 16px;
+}
+
+.card {
+  margin-bottom: 24px;
+}
+
+.cardBackground {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 24px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.cardBackground::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.heading {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.rates {
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  margin: 12px 0;
+  color: #fff;
+}
+
+.cardNumberContainer {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 12px;
+  margin: 16px 0;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.cardNumber {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.illustration {
+  text-align: center;
+  font-size: 48px;
+}
+
+.illustrationPlaceholder {
+  padding: 16px;
+}
+
+.pageIndicators {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.indicatorActive {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.switcherContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.switcherOption {
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.switcherOption:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.switcherTitle {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.switcherSubtitle {
+  font-size: 11px;
+  margin: 4px 0 0 0;
+  opacity: 0.85;
+}
+
+.ctaButton {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(102, 126, 234, 0.5);
+}
+
+.ctaButton:active {
+  transform: translateY(0);
+}

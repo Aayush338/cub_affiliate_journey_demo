@@ -1,0 +1,22 @@
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerText {
+  	position: relative;
+  	font-size: 20px;
+  	letter-spacing: -0.02em;
+  	line-height: 28px;
+  	font-weight: 900;
+  	font-family: 'Noto Sans';
+  	text-align: center;
+  	color: #fff;
+}
+.otherDaysOf {
+  	background: linear-gradient(180deg, #eeff41, #fefee0);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+
+

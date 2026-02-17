@@ -1,0 +1,9 @@
+.container {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.main {
+  padding: 0;
+  margin: 0;
+}

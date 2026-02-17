@@ -1,0 +1,60 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 16px;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0px;
+  align-items: center;
+}
+
+.time {
+  flex: 1;
+}
+
+.statusIcons {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.signalIcon,
+.wifiIcon,
+.batteryIcon {
+  width: 16px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 2px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.settingsButton {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.settingsButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
