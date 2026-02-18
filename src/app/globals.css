@@ -43,6 +43,21 @@
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
+/* Chrome, Safari, Edge */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* IE & old Edge */
+html {
+  -ms-overflow-style: none;
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);

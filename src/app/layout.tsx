@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Noto_Sans } from "next/font/google";
 import "./globals.css";
 
 import { Box } from "@mui/material";
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 
 const notoSans = Noto_Sans({
   subsets: ["latin"],
@@ -22,39 +23,42 @@ export default function RootLayout({
         className={notoSans.className}
         style={{ margin: 0, backgroundColor: "black" }}
       >
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            minHeight: "100vh",
-            width: "100vw",
-            backgroundColor: "black",
-          }}
-        >
+        <AppRouterCacheProvider>
           <Box
             sx={{
-              width: "100%",
-              height: "100vh",
-              maxWidth: {
-                xs: "100%",
-                sm: "640px",
-                md: "460px",
-              },
-              maxHeight: {
-                xs: "100vh",
-                sm: "960px",
-              },
-              backgroundColor: "#000000",
-              position: "relative",
-              overflow: "hidden",
               display: "flex",
-              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              minHeight: "100vh",
+              width: "100vw",
+              backgroundColor: "black",
             }}
           >
-            {children}
+            <Box
+              sx={{
+                width: "100%",
+                height: "100dvh",
+                maxWidth: {
+                  xs: "100%",
+                  sm: "640px",
+                  md: "460px",
+                },
+                maxHeight: {
+                  xs: "100dvh",
+                  sm: "960px",
+                },
+                backgroundColor: "#000000",
+                position: "relative",
+                overflowY: "auto",
+                overflowX: "hidden",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              {children}
+            </Box>
           </Box>
-        </Box>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );

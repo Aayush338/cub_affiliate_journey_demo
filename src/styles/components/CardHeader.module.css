@@ -4,57 +4,116 @@
   padding: 0px 16px;
 }
 
-.topBar {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 0px;
-  align-items: center;
-}
 
-.time {
-  flex: 1;
-}
 
-.statusIcons {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-}
-
-.signalIcon,
-.wifiIcon,
-.batteryIcon {
-  width: 16px;
-  height: 10px;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 2px;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 16px;
-}
-
-.logo {
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.settingsButton {
-  background: none;
-  border: none;
+.earnYour {
+  position: relative;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  line-height: 20px;
   color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
+  text-align: center;
+  font-weight: 400;
 }
 
-.settingsButton:hover {
+.salaryDayBonus {
+  font-weight: 900;
+}
+
+.bonusText {
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.completeYourCardApplication {
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+}
+
+.rewardsImageWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.carouselContainer {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  width: 100%;
+  position: relative;
+}
+
+.carouselContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselSlide {
+  flex-shrink: 0;
+  width: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.activeDot {
+  background-color: #EEFF41;
+  width: 18px;
+  border-radius: 3px;
+}
+
+.cardArea {
+  position: relative;
+  width: 100%;
+}
+
+.cardImgWrapper {
+  position: relative;
+  height: 208px;
+  width: 100%;
+}
+
+.glassCardWrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -240px;
+  z-index: 20;
+}
+
+.glassCard {
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(40px);
+  padding: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-start;
 }
