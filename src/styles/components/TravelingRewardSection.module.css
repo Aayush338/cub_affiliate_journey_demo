@@ -13,7 +13,7 @@
 	color: #fff;
 }
 
-.otherDaysOf {
+.travelingExperience {
 	background: linear-gradient(180deg, #eeff41, #fefee0);
 	-webkit-background-clip: text;
 	background-clip: text;
@@ -25,40 +25,33 @@
 	display: flex;
 	align-items: center;
 	gap: 16px;
-  margin: 0px 16px;
-  justify-content: center;
+	margin: 0px 16px;
+	justify-content: center;
 }
 
-.fivePercentRewards {
+.travelingRewards {
 	flex: 1;
-	height: 210px;
+	height: 249px;
 	border-radius: 16px;
 	border: 1px solid rgba(255, 255, 255, 0.40);
 	padding: 16px 12px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-start;
+	position: relative;
+	overflow: hidden;
 }
 
-.super {
+.travelRewardsText {
 	position: relative;
-	font-size: 16px;
-	line-height: 20px;
-	font-weight: 900;
-	color: #80ff86;
-	text-align: left;
-}
-
-.acceleratedRewards {
-	position: relative;
-	font-size: 16px;
-	line-height: 20px;
+	font-size: 20px;
+	line-height: 28px;
 	font-weight: 900;
 	color: #fff;
 	text-align: left;
 }
 
-.spendsBelow20k {
+.travelRewardsSubText {
 	height: 16px;
 	position: relative;
 	font-size: 12px;

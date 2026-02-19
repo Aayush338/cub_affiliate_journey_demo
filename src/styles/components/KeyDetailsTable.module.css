@@ -1,62 +1,94 @@
 .section {
-  padding: 32px 16px;
-  background: linear-gradient(180deg, rgba(118, 75, 162, 0.05) 0%, transparent 100%);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+	display: flex;
+	flex-direction: column;
 }
 
-.heading {
-  font-size: 24px;
-  font-weight: 800;
-  margin: 0 0 24px 0;
-  text-align: center;
+.headerText {
+	position: relative;
+	font-size: 20px;
+	letter-spacing: -0.02em;
+	line-height: 28px;
+	font-weight: 900;
+	color: #fff;
+	text-align: center;
 }
 
-.tableContainer {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  overflow: hidden;
+.keyDetailsRow {
+	position: relative;
+	display: flex;
+	align-items: stretch;
+	gap: 8px;
+	overflow-x: auto;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
 }
 
-.table {
-  width: 100%;
-  border-collapse: collapse;
+.keyDetailsRow::-webkit-scrollbar {
+	display: none;
 }
 
-.table tr {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  transition: background-color 0.3s ease;
+.card {
+	min-width: 240px;
+	flex-shrink: 0;
+	position: relative;
+	border-radius: 16px;
+	border: 1px solid rgba(255, 255, 255, 0.40);
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	padding: 24px;
+	gap: 16px;
+	text-align: left;
+	color: #fff;
+	font-family: 'Noto Sans';
 }
 
-.table tr:hover {
-  background: rgba(102, 126, 234, 0.1);
+.card:first-child {
+	margin-left: 16px;
 }
 
-.table tr:last-child {
-  border-bottom: none;
+.card:last-child {
+	margin-right: 16px;
 }
 
-.table td {
-  padding: 16px;
-  font-size: 14px;
+.topText {
+	font-size: 14px;
+	letter-spacing: -0.02em;
+	line-height: 20px;
+	font-weight: 900;
 }
 
-.label {
-  font-weight: 600;
-  text-align: left;
-  width: 50%;
+.superText {
+	color: #80FF86;
 }
 
-.value {
-  text-align: right;
-  opacity: 0.9;
+.bulletList {
+	margin: 0;
+	padding-left: 22px;
+	list-style-type: disc;
+	font-size: 12px;
+	letter-spacing: -0.24px;
+	line-height: 16px;
+	color: #fff;
 }
 
-.highlightRow {
-  background: linear-gradient(90deg, rgba(102, 126, 234, 0.2) 0%, transparent 100%);
+.bulletList li {
+	margin-bottom: 8px;
+	font-weight: 400;
 }
 
-.highlightRow .label {
-  color: #667eea;
-  font-weight: 700;
+.bulletList li:last-child {
+	margin-bottom: 0;
+}
+
+.bulletList li b {
+	font-weight: 700;
+}
+
+.link {
+	color: #fff;
+	text-decoration: underline;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: -0.24px;
 }

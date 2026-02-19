@@ -1,0 +1,23 @@
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.headerText {
+  	width: 327px;
+  	position: relative;
+  	font-size: 20px;
+  	letter-spacing: -0.02em;
+  	line-height: 28px;
+  	display: inline-block;
+  	font-weight: 900;
+  	font-family: 'Noto Sans';
+  	text-align: center;
+  	color: #fff;
+}
+.annualFee {
+  	background: linear-gradient(180deg, #eeff41, #fefee0);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+

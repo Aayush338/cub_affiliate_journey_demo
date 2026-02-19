@@ -1,0 +1,41 @@
+.primary {
+    width: 100%;
+    position: relative;
+    border-radius: 24px;
+    font-weight: 700;
+    border: none;
+    background-color: #3d41fa;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Noto Sans';
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.primary:active {
+    transform: scale(0.98);
+    background-color: #2a2dbb;
+}
+
+.primary:disabled {
+        background-color: rgba(255, 255, 255, 0.20);
+    cursor: not-allowed;
+}
+
+.text {
+    position: relative;
+    letter-spacing: 0.02em;
+    line-height: 24px;
+    pointer-events: none;
+}
+
+.text:disabled {
+    color:rgba(255, 255, 255, 0.70);
+}
