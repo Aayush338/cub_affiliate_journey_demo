@@ -10,10 +10,13 @@ import { Assets } from "@/constants/assets";
 import { BenefitsTable } from "@/components/features/cub_cvp/BenefitsTable";
 import { LifetimeFreeSection } from "@/components/features/cub_cvp/LifetimeFreeSection";
 import { CardSwitcher } from "@/components/features/cub_cvp/CardSwitcher";
+import { TravelingRewardsSection } from "@/components/features/cub_cvp/TravelingRewardsSection";
+import { CubFeeAndChargesSection } from "@/components/features/cub_cvp/CubFeeAndChargesSection";
 
 export default function CreditCardJourneyPage() {
-
-  const [cardType, setCardType] = React.useState<"physical" | "virtual">("physical");
+  const [cardType, setCardType] = React.useState<"physical" | "virtual">(
+    "physical",
+  );
 
   return (
     <Box
@@ -30,9 +33,14 @@ export default function CreditCardJourneyPage() {
     >
       <CardHeader />
       <CardSwitcher selected={cardType} onSelect={setCardType} />
-      <BonusSection />
+      <BonusSection selected={cardType} />
       <RewardsSection />
-      <LifetimeFreeSection />
+      {cardType === "physical" ? (
+        <TravelingRewardsSection />
+      ) : (
+        <LifetimeFreeSection />
+      )}
+      {cardType === "physical" ? <CubFeeAndChargesSection/> : <Box/>}
       <KeyDetailsTable />
       <BenefitsTable selected={cardType} onSelect={setCardType} />
     </Box>

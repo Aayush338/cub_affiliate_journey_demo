@@ -16,75 +16,79 @@
 .keyDetailsRow {
 	position: relative;
 	display: flex;
-	align-items: center;
+	align-items: stretch;
 	gap: 8px;
 	overflow-x: auto;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
 }
 
-.fee {
-	height: 192px;
-	width: fit-content;
+.keyDetailsRow::-webkit-scrollbar {
+	display: none;
+}
+
+.card {
+	min-width: 240px;
 	flex-shrink: 0;
 	position: relative;
 	border-radius: 16px;
-	background: border-box;
 	border: 1px solid rgba(255, 255, 255, 0.40);
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	padding: 24px;
+	gap: 16px;
 	text-align: left;
-	font-size: 14px;
 	color: #fff;
 	font-family: 'Noto Sans';
 }
 
-.fee:first-child {
+.card:first-child {
 	margin-left: 16px;
 }
 
-.fee:last-child {
+.card:last-child {
 	margin-right: 16px;
 }
 
-.feeAndOthersParent {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 16px;
-	max-width: 100%;
-}
-
-.feeAndOthers {
-	align-self: stretch;
-	position: relative;
+.topText {
+	font-size: 14px;
 	letter-spacing: -0.02em;
 	line-height: 20px;
 	font-weight: 900;
 }
 
-.thisIsARupayVirtualOnlyCParent {
-	align-self: stretch;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 8px;
-	font-size: 12px;
+.superText {
+	color: #80FF86;
 }
 
-.thisIsAContainer {
-	align-self: stretch;
-	position: relative;
-	letter-spacing: -0.02em;
-	line-height: 16px;
-}
-
-.thisIsARupayVirtualOnlyC {
+.bulletList {
 	margin: 0;
-	font-family: inherit;
-	font-size: inherit;
-	padding-left: 24px;
+	padding-left: 22px;
 	list-style-type: disc;
+	font-size: 12px;
+	letter-spacing: -0.24px;
+	line-height: 16px;
+	color: #fff;
+}
+
+.bulletList li {
+	margin-bottom: 8px;
+	font-weight: 400;
+}
+
+.bulletList li:last-child {
+	margin-bottom: 0;
+}
+
+.bulletList li b {
+	font-weight: 700;
+}
+
+.link {
+	color: #fff;
+	text-decoration: underline;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: -0.24px;
 }

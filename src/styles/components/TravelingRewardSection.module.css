@@ -1,0 +1,63 @@
+.section {
+	display: flex;
+	flex-direction: column;
+}
+
+.headerText {
+	position: relative;
+	font-size: 20px;
+	letter-spacing: -0.02em;
+	line-height: 28px;
+	font-weight: 900;
+	text-align: center;
+	color: #fff;
+}
+
+.travelingExperience {
+	background: linear-gradient(180deg, #eeff41, #fefee0);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.rewardsRow {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin: 0px 16px;
+	justify-content: center;
+}
+
+.travelingRewards {
+	flex: 1;
+	height: 249px;
+	border-radius: 16px;
+	border: 1px solid rgba(255, 255, 255, 0.40);
+	padding: 16px 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	position: relative;
+	overflow: hidden;
+}
+
+.travelRewardsText {
+	position: relative;
+	font-size: 20px;
+	line-height: 28px;
+	font-weight: 900;
+	color: #fff;
+	text-align: left;
+}
+
+.travelRewardsSubText {
+	height: 16px;
+	position: relative;
+	font-size: 12px;
+	letter-spacing: -0.02em;
+	line-height: 16px;
+	color: rgba(255, 255, 255, 0.7);
+	text-align: left;
+	display: inline-block;
+}

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Sans } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import "./globals.css";
 
 import { Box } from "@mui/material";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
+import { NotistackProvider } from "@/components/providers/NotistackProvider";
 
 const notoSans = Noto_Sans({
   subsets: ["latin"],
@@ -11,6 +12,15 @@ const notoSans = Noto_Sans({
   style: ["normal", "italic"],
   display: "swap",
 });
+
+export const metadata: Metadata = {
+  title: "CUB Affiliate Journey",
+  description: "CUB Affiliate Journey by SalarySe",
+  icons: {
+    icon: "/favicon.png",
+  },
+};
+
 
 export default function RootLayout({
   children,
@@ -55,7 +65,9 @@ export default function RootLayout({
                 flexDirection: "column",
               }}
             >
-              {children}
+              <NotistackProvider>
+                {children}
+              </NotistackProvider>
             </Box>
           </Box>
         </AppRouterCacheProvider>

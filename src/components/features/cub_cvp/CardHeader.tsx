@@ -10,6 +10,8 @@ import { Box } from "@mui/material";
 import { CustomButton } from "@/components/ui/CustomButton";
 import { useRouter } from "next/navigation";
 import { TopBar } from "@/components/common/TopBar";
+import { cubLoginAction } from "@/app/actions/cubActions";
+import { useSnackbar } from "notistack";
 
 const carouselData = [
   {
@@ -37,11 +39,45 @@ export function CardHeader() {
   const [isAgreed, setIsAgreed] = useState(false);
   const [mobileNumber, setMobileNumber] = useState("");
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isOtp,setIsOtp] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+  const { enqueueSnackbar } = useSnackbar();
 
-  const _handleNavigation = () => {
-    router.push("/account-exists");
+  const _handleCheckEligibility = async () => {
+    setIsLoading(true);
+    try {
+      const result = await cubLoginAction({
+        phone: mobileNumber
+      });
+      console.log("API Result:", result);
+
+      if (result.success) {
+        enqueueSnackbar("Login successful!", { variant: "success" });
+        router.push("/account-exists");
+      } else {
+        if (
+          result.message ===
+          "you've already signed up on the SalarySe app, please login via the app!"
+        ) {
+          router.push("/account-exists");
+        } else {
+          enqueueSnackbar(result.message ?? "Something went wrong", {
+            variant: "error",
+            autoHideDuration: 1000,
+            style: {
+              backgroundColor: "#F74C32",
+            },
+          });
+        }
+      }
+    } catch (error) {
+      console.error("Error checking eligibility:", error);
+      enqueueSnackbar("Network error, please try again", { variant: "error" });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleMobileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -126,7 +162,7 @@ export function CardHeader() {
         <Box className={styles.glassCardWrapper}>
           <Box className={styles.glassCard}>
             <p className={styles.completeYourCardApplication}>
-              complete your card application
+              enter your mobile number
             </p>
             <Box sx={{ marginBottom: "16px" }} />
             <MobileTextField
@@ -146,9 +182,9 @@ export function CardHeader() {
             />
             <Box sx={{ marginBottom: "16px" }} />
             <CustomButton
-              label="check eligibility now"
-              disabled={!isAgreed || mobileNumber.length !== 10}
-              onTap={_handleNavigation}
+              label={isLoading ? "checking..." : "check eligibility now"}
+              disabled={!isAgreed || mobileNumber.length !== 10 || isLoading}
+              onTap={_handleCheckEligibility}
             />
           </Box>
         </Box>

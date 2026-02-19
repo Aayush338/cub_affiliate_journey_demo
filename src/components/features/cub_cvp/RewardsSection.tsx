@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "@/styles/components/RewardsSection.module.css";
 import { Box } from "@mui/material";
 import { Assets } from "@/constants/assets";

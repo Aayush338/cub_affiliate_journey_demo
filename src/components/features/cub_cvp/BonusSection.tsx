@@ -4,7 +4,11 @@ import { Box } from "@mui/material";
 import { Assets } from "@/constants/assets";
 import Image from "next/image";
 
-export function BonusSection() {
+interface BonusSectionProps {
+  selected: "physical" | "virtual";
+}
+
+export function BonusSection({ selected }: BonusSectionProps) {
   return (
     <Box className={styles.section}>
       <p className={styles.heading}>introducing</p>
@@ -13,11 +17,7 @@ export function BonusSection() {
           marginBottom: "16px",
         }}
       />
-      <i
-       className={styles.headerText}
-      >
-        Salary Day Bonus
-      </i>
+      <i className={styles.headerText}>Salary Day Bonus</i>
       <Box
         sx={{
           marginBottom: "8px",
@@ -31,7 +31,7 @@ export function BonusSection() {
         }}
       >
         <Image
-          src={Assets.cubSdb25}
+          src={selected === "physical" ? Assets.cubSdb375 : Assets.cubSdb25}
           alt="cub_sdb_25"
           width={1000}
           height={235}
