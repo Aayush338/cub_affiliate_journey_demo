@@ -57,14 +57,14 @@ const CheckboxWithText: React.FC<CheckboxWithTextProps> = ({
                 boxWidth={width}
                 boxHeight={height}
             />
-            <Text
-                style={{
-                    textAlign: "left",
-                    letterSpacing: "-0.2px",
-                    fontSize: "10px",
-                    lineHeight: "14px",
-                    fontWeight: "400"
-                }}
+            <p
+            style={{
+                fontSize: "10px",
+                lineHeight: "14px",
+                color: "#fff",
+                letterSpacing: "-0.02em",
+                textAlign: "left"
+            }}
             >
                 {text}{" "}
                 {linkText && linkHref && (
@@ -84,7 +84,7 @@ const CheckboxWithText: React.FC<CheckboxWithTextProps> = ({
                     </Link>
                 )}
                 {textAfterLink && ` ${textAfterLink}`}
-            </Text>
+            </p>
         </Box>
     );
 };

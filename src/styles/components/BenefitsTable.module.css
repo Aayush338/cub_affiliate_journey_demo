@@ -1,263 +1,317 @@
-.rectangleParent {
-  	width: 343px;
-  	height: 243px;
-  	position: relative;
-  	border-radius: 16px;
-  	background: border-box;
-  	border: 1px solid transparent;
-  	box-sizing: border-box;
-  	overflow: hidden;
-  	flex-shrink: 0;
-  	text-align: center;
-  	font-size: 12px;
-  	color: #fff;
-  	font-family: 'Noto Sans';
-}
-.frameChild {
-  	position: absolute;
-  	width: 100%;
-  	top: 0px;
-  	right: 0px;
-  	left: 0px;
-  	background: linear-gradient(180deg, rgba(61, 65, 250, 0.6), rgba(61, 65, 250, 0.24)) padding-box, linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)) border-box;
-  	border: 1px solid transparent;
-  	box-sizing: border-box;
-  	height: 48px;
-}
-.virtualOnly {
-  	position: absolute;
-  	top: 15px;
-  	right: 20px;
-  	letter-spacing: -0.02em;
-  	line-height: 16px;
-}
-.frameItem {
-  	position: absolute;
-  	height: calc(100% - 1px);
-  	top: 1.5px;
-  	bottom: -0.5px;
-  	left: calc(50% - 58px);
-  	background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)) border-box;
-  	border-right: 1px solid transparent;
-  	box-sizing: border-box;
-  	width: 1px;
-}
-.frameInner {
-  	position: absolute;
-  	height: calc(100% - 1px);
-  	top: 1.5px;
-  	bottom: -0.5px;
-  	left: calc(50% + 56px);
-  	background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)) border-box;
-  	border-right: 1px solid transparent;
-  	box-sizing: border-box;
-  	width: 1px;
-}
-.benefits {
-  	position: absolute;
-  	top: 15px;
-  	left: 14px;
-  	letter-spacing: -0.02em;
-  	line-height: 16px;
-}
-.physicalVirtual {
-  	position: absolute;
-  	top: 15px;
-  	left: calc(50% - 51.5px);
-  	letter-spacing: -0.02em;
-  	line-height: 16px;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 103px;
-}
-.salaryDayBonus {
-  	position: absolute;
-  	top: 56px;
-  	left: 16px;
-  	letter-spacing: -0.02em;
-  	line-height: 16px;
-  	display: flex;
-  	text-align: left;
-  	align-items: center;
-  	width: 82px;
-}
-.domesticLounge {
-  	position: absolute;
-  	top: 104px;
-  	left: 16px;
-  	letter-spacing: -0.02em;
-  	line-height: 16px;
-  	display: flex;
-  	text-align: left;
-  	align-items: center;
-  	width: 82px;
-}
-.annualSavings {
-  	position: absolute;
-  	top: 160px;
-  	left: 16px;
-  	letter-spacing: -0.02em;
-  	line-height: 16px;
-  	display: flex;
-  	text-align: left;
-  	align-items: center;
-  	width: 88px;
-}
-.annualFees {
-  	position: absolute;
-  	top: 208px;
-  	left: 16px;
-  	letter-spacing: -0.02em;
-  	line-height: 16px;
-  	display: flex;
-  	text-align: left;
-  	align-items: center;
-  	width: 82px;
-}
-.div {
-  	position: absolute;
-  	top: 64px;
-  	right: 16px;
-  	letter-spacing: -0.02em;
-  	line-height: 16px;
-  	text-align: right;
-  	display: flex;
-  	align-items: center;
-  	justify-content: flex-end;
-  	width: 82px;
-}
-.none {
-  	position: absolute;
-  	top: 112px;
-  	right: 16px;
-  	letter-spacing: -0.02em;
-  	line-height: 16px;
-  	text-align: right;
-  	display: flex;
-  	align-items: center;
-  	justify-content: flex-end;
-  	width: 82px;
-}
-.div2 {
-  	position: absolute;
-  	top: 160px;
-  	right: 16px;
-  	letter-spacing: -0.02em;
-  	line-height: 16px;
-  	text-align: right;
-  	display: flex;
-  	align-items: center;
-  	justify-content: flex-end;
-  	width: 82px;
-}
-.free {
-  	position: absolute;
-  	top: 206px;
-  	right: 16px;
-  	font-size: 14px;
-  	letter-spacing: -0.02em;
-  	line-height: 20px;
-  	font-weight: 900;
-  	background: linear-gradient(180deg, #eeff41, #fff 81.73%);
-  	-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
-  	text-align: right;
-  	display: flex;
-  	align-items: center;
-  	justify-content: flex-end;
-  	width: 82px;
-}
-.div3 {
-  	position: absolute;
-  	top: 62px;
-  	left: calc(50% - 41.5px);
-  	font-size: 14px;
-  	letter-spacing: -0.02em;
-  	line-height: 20px;
-  	font-weight: 900;
-  	background: linear-gradient(180deg, #eeff41, #fff 81.73%);
-  	-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 82px;
-}
-.yr {
-  	position: absolute;
-  	top: 110px;
-  	left: calc(50% - 41.5px);
-  	font-size: 14px;
-  	letter-spacing: -0.02em;
-  	line-height: 20px;
-  	font-weight: 900;
-  	background: linear-gradient(180deg, #eeff41, #fff 81.73%);
-  	-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 82px;
-}
-.div4 {
-  	position: absolute;
-  	top: 158px;
-  	left: calc(50% - 41.5px);
-  	font-size: 14px;
-  	letter-spacing: -0.02em;
-  	line-height: 20px;
-  	font-weight: 900;
-  	background: linear-gradient(180deg, #eeff41, #fff 81.73%);
-  	-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 82px;
-}
-.gst {
-  	position: absolute;
-  	top: 208px;
-  	left: calc(50% - 41.5px);
-  	letter-spacing: -0.02em;
-  	line-height: 16px;
-  	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	width: 82px;
-}
-.lineDiv {
-  	position: absolute;
-  	width: calc(100% + 1px);
-  	top: 95.5px;
-  	right: -0.5px;
-  	left: -0.5px;
-  	background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)) border-box;
-  	border-top: 1px solid transparent;
-  	box-sizing: border-box;
-  	height: 1px;
-}
-.frameChild2 {
-  	position: absolute;
-  	width: calc(100% + 1px);
-  	top: 143.5px;
-  	right: -0.5px;
-  	left: -0.5px;
-  	background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)) border-box;
-  	border-top: 1px solid transparent;
-  	box-sizing: border-box;
-  	height: 1px;
-}
-.frameChild3 {
-  	position: absolute;
-  	width: calc(100% + 1px);
-  	top: 191.5px;
-  	right: -0.5px;
-  	left: -0.5px;
-  	background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)) border-box;
-  	border-top: 1px solid transparent;
-  	box-sizing: border-box;
-  	height: 1px;
+.section {
+	display: flex;
+	flex-direction: column;
 }
 
+.headerRow {
+	display: flex;
+	padding: 0px 16px;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.headerText {
+	position: relative;
+	font-size: 20px;
+	letter-spacing: -0.02em;
+	line-height: 28px;
+	font-weight: 900;
+	font-family: 'Noto Sans';
+	text-align: left;
+	color: #fff;
+}
+
+.upgrade {
+	background: linear-gradient(180deg, #eeff41, #fefee0);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+
+.tableFrame {
+	width: calc(100% - 32px);
+	height: 243px;
+	position: relative;
+	margin: 0px 16px;
+	border-radius: 16px;
+	background: border-box;
+	border: 1px solid rgba(255, 255, 255, 0.40);
+	box-sizing: border-box;
+	overflow: hidden;
+	flex-shrink: 0;
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+}
+
+.tableHeading {
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	background: linear-gradient(180deg, rgba(61, 65, 250, 0.6), rgba(61, 65, 250, 0.24)) padding-box, linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)) border-box;
+	box-sizing: border-box;
+	height: 48px;
+}
+
+.virtualOnly {
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	letter-spacing: -0.02em;
+	line-height: 16px;
+}
+
+.frameItem {
+	position: absolute;
+	height: calc(100% - 1px);
+	top: 1.5px;
+	bottom: -0.5px;
+	left: calc(50% - 58px);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)) border-box;
+	border-right: 1px solid rgba(255, 255, 255, 0.40);
+	box-sizing: border-box;
+	width: 1px;
+}
+
+.frameInner {
+	position: absolute;
+	height: calc(100% - 1px);
+	top: 1.5px;
+	bottom: -0.5px;
+	left: calc(50% + 56px);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)) border-box;
+	border-right: 1px solid rgba(255, 255, 255, 0.40);
+	box-sizing: border-box;
+	width: 1px;
+}
+
+.benefits {
+	position: absolute;
+	top: 15px;
+	left: 14px;
+	letter-spacing: -0.02em;
+	line-height: 16px;
+}
+
+.physicalVirtual {
+	position: absolute;
+	top: 15px;
+	left: calc(50% - 51.5px);
+	letter-spacing: -0.02em;
+	line-height: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 103px;
+}
+
+.salaryDayBonus {
+	position: absolute;
+	top: 56px;
+	left: 16px;
+	letter-spacing: -0.02em;
+	line-height: 16px;
+	display: flex;
+	text-align: left;
+	align-items: center;
+	width: 82px;
+}
+
+.domesticLounge {
+	position: absolute;
+	top: 104px;
+	left: 16px;
+	letter-spacing: -0.02em;
+	line-height: 16px;
+	display: flex;
+	text-align: left;
+	align-items: center;
+	width: 82px;
+}
+
+.annualSavings {
+	position: absolute;
+	top: 160px;
+	left: 16px;
+	letter-spacing: -0.02em;
+	line-height: 16px;
+	display: flex;
+	text-align: left;
+	align-items: center;
+	width: 88px;
+}
+
+.annualFees {
+	position: absolute;
+	top: 208px;
+	left: 16px;
+	letter-spacing: -0.02em;
+	line-height: 16px;
+	display: flex;
+	text-align: left;
+	align-items: center;
+	width: 82px;
+}
+
+.div {
+	position: absolute;
+	top: 64px;
+	right: 16px;
+	letter-spacing: -0.02em;
+	line-height: 16px;
+	text-align: right;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 82px;
+}
+
+.none {
+	position: absolute;
+	top: 112px;
+	right: 16px;
+	letter-spacing: -0.02em;
+	line-height: 16px;
+	text-align: right;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 82px;
+}
+
+.div2 {
+	position: absolute;
+	top: 160px;
+	right: 16px;
+	letter-spacing: -0.02em;
+	line-height: 16px;
+	text-align: right;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 82px;
+}
+
+.free {
+	position: absolute;
+	top: 206px;
+	right: 16px;
+	font-size: 14px;
+	letter-spacing: -0.02em;
+	line-height: 20px;
+	font-weight: 900;
+	background: linear-gradient(180deg, #eeff41, #fff 81.73%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-align: right;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 82px;
+}
+
+.div3 {
+	position: absolute;
+	top: 62px;
+	left: calc(50% - 41.5px);
+	font-size: 14px;
+	letter-spacing: -0.02em;
+	line-height: 20px;
+	font-weight: 900;
+	background: linear-gradient(180deg, #eeff41, #fff 81.73%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 82px;
+}
+
+.yr {
+	position: absolute;
+	top: 110px;
+	left: calc(50% - 41.5px);
+	font-size: 14px;
+	letter-spacing: -0.02em;
+	line-height: 20px;
+	font-weight: 900;
+	background: linear-gradient(180deg, #eeff41, #fff 81.73%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 82px;
+}
+
+.div4 {
+	position: absolute;
+	top: 158px;
+	left: calc(50% - 41.5px);
+	font-size: 14px;
+	letter-spacing: -0.02em;
+	line-height: 20px;
+	font-weight: 900;
+	background: linear-gradient(180deg, #eeff41, #fff 81.73%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 82px;
+}
+
+.gst {
+	position: absolute;
+	top: 208px;
+	left: calc(50% - 41.5px);
+	letter-spacing: -0.02em;
+	line-height: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 82px;
+}
+
+.lineDiv {
+	position: absolute;
+	width: calc(100% + 1px);
+	top: 95.5px;
+	right: -0.5px;
+	left: -0.5px;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)) border-box;
+	border-top: 1px solid rgba(255, 255, 255, 0.40);
+	box-sizing: border-box;
+	height: 1px;
+}
+
+.frameChild2 {
+	position: absolute;
+	width: calc(100% + 1px);
+	top: 143.5px;
+	right: -0.5px;
+	left: -0.5px;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)) border-box;
+	border-top: 1px solid rgba(255, 255, 255, 0.40);
+	box-sizing: border-box;
+	height: 1px;
+}
+
+.frameChild3 {
+	position: absolute;
+	width: calc(100% + 1px);
+	top: 191.5px;
+	right: -0.5px;
+	left: -0.5px;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)) border-box;
+	border-top: 1px solid rgba(255, 255, 255, 0.40);
+	box-sizing: border-box;
+	height: 1px;
+}

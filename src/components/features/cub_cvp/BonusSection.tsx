@@ -1,31 +1,23 @@
 import React from "react";
 import styles from "@/styles/components/BonusSection.module.css";
 import { Box } from "@mui/material";
-import Text from "@/components/ui/Text";
 import { Assets } from "@/constants/assets";
 import Image from "next/image";
 
-export function BonusSection() {
+interface BonusSectionProps {
+  selected: "physical" | "virtual";
+}
+
+export function BonusSection({ selected }: BonusSectionProps) {
   return (
     <Box className={styles.section}>
-      <Text className={styles.heading}>introducing</Text>
+      <p className={styles.heading}>introducing</p>
       <Box
         sx={{
           marginBottom: "16px",
         }}
       />
-      <Text
-        sx={{
-          fontSize: "32px",
-          lineHeight: "40px",
-          fontWeight: "900",
-          letterSpacing: "-0.64px",
-          textAlign: "center",
-        }}
-        italic
-      >
-        Salary Day bonus
-      </Text>
+      <i className={styles.headerText}>Salary Day Bonus</i>
       <Box
         sx={{
           marginBottom: "8px",
@@ -39,14 +31,15 @@ export function BonusSection() {
         }}
       >
         <Image
-          src={Assets.cubSdb25}
+          src={selected === "physical" ? Assets.cubSdb375 : Assets.cubSdb25}
           alt="cub_sdb_25"
-          width={375}
+          width={1000}
           height={235}
+          style={{ width: "100%", height: "auto" }}
           priority
         />
       </Box>
-            <Box
+      <Box
         sx={{
           marginBottom: "64px",
         }}
